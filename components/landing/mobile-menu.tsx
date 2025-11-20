@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/logo";
 import { useTranslations } from "next-intl";
-import { useAuth, UserButton } from "@clerk/nextjs";
+// import { useAuth, UserButton } from "@clerk/nextjs";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -25,7 +25,8 @@ export function MobileMenu({ isOpen, onClose, navItems }: MobileMenuProps) {
   const pathname = usePathname();
   const t = useTranslations("GuestHeader");
 
-  const { isLoaded, isSignedIn } = useAuth();
+  const isLoaded = true;
+  const isSignedIn = false; // Temporarily disabled authentication
 
   // Prevent scrolling when menu is open
   useEffect(() => {

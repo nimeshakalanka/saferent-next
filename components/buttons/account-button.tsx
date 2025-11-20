@@ -7,7 +7,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { SignOutButton, useUser } from "@clerk/nextjs";
+// import { SignOutButton, useUser } from "@clerk/nextjs";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { CreditCard, LogOutIcon, PanelsTopLeft, UserIcon } from "lucide-react";
 import { Link } from "@/i18n/navigation";

@@ -1,13 +1,12 @@
 "use client";
 
 import { useAppContext } from "@/context/app";
-import { useAuth } from "@clerk/nextjs";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 export default function LoadUserData() {
   const { setBilling, user, setUser, billing } = useAppContext();
-  const { isSignedIn } = useAuth();
+  const isSignedIn = false; // Temporarily disabled authentication
   const [loading, setLoading] = useState(false);
 
   const fetchUserBillingData = async () => {

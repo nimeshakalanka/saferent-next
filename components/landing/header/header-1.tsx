@@ -12,7 +12,6 @@ import { Button } from "@/components/ui/button";
 import { MobileMenu } from "@/components/landing/mobile-menu";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Logo } from "@/components/logo";
-import { useAuth } from "@clerk/nextjs";
 import { useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/navigation";
 import { useAppContext } from "@/context/app";
@@ -39,7 +38,8 @@ export default function Header1() {
   const t = useTranslations("GuestHeader");
 
   const { setBilling, setUser } = useAppContext();
-  const { isSignedIn, isLoaded } = useAuth();
+  const isSignedIn = false; // Temporarily disabled authentication
+  const isLoaded = true;
 
   // Only fetch /api/app if user is signed in and auth is loaded
   const { data, error } = useSWR(

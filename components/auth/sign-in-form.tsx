@@ -1,5 +1,5 @@
 "use client";
-import { SignIn, useAuth } from "@clerk/nextjs";
+// import { SignIn, useAuth } from "@clerk/nextjs";
 import { useTheme } from "next-themes";
 import { dark } from "@clerk/themes";
 import { Link } from "@/i18n/navigation";

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { CoinsIcon } from "lucide-react";
 import { useState } from "react";
 import { CreditTopUpDialog } from "@/components/credit-top-up-dialog";
-import { useAuth } from "@clerk/nextjs";
+// import { useAuth } from "@clerk/nextjs";
 import {
   Popover,
   PopoverContent,
