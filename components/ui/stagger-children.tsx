@@ -86,10 +86,10 @@ export function StaggerItem({
       y: 0,
       transition: {
         duration,
-        ease: [0.25, 0.1, 0.25, 1.0],
+        ease: [0.25, 0.1, 0.25, 1.0] as const,
       },
     },
-  };
+  } as const;
 
   return (
     <motion.div className={className} variants={item}>
