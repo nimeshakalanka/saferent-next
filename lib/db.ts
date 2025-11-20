@@ -42,6 +42,10 @@ export async function connectDB() {
   return cached!.conn;
 }
 
+export function isConnected(): boolean {
+  return mongoose.connection.readyState === 1;
+}
+
 export function getConnectionState() {
   return mongoose.connection.readyState;
 }
