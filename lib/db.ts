@@ -5,11 +5,7 @@ declare global {
   var mongoose: { conn: any | null; promise: Promise<any> | null } | undefined;
 }
 
-const MONGODB_URI = process.env.MONGO_URI!;
-
-if (!MONGODB_URI) {
-  throw new Error('Please define the MONGO_URI environment variable');
-}
+const MONGODB_URI = process.env.MONGO_URI || '';
 
 let cached = global.mongoose;
 
@@ -18,6 +14,11 @@ if (!cached) {
 }
 
 export async function connectDB() {
+  if (!MONGODB_URI) {
+    console.warn('MONGO_URI not defined, skipping database connection');
+    return null;
+  }
+
   if (cached!.conn) {
     return cached!.conn;
   }
