@@ -1,0 +1,58 @@
+import { Music, Lamp, Trophy, GraduationCap, Video, Package } from 'lucide-react';
+
+export const categories = [
+  {
+    id: 'music',
+    icon: Music,
+    title: 'Music',
+    description: 'Instruments, audio gear, and studio equipment',
+    itemCount: 234,
+    gradient: 'from-violet-500 to-fuchsia-500',
+    bgGradient: 'from-violet-500/10 to-fuchsia-500/10',
+  },
+  {
+    id: 'decoration',
+    icon: Lamp,
+    title: 'Decoration',
+    description: 'Event decor, furniture, and styling items',
+    itemCount: 189,
+    gradient: 'from-amber-500 to-orange-500',
+    bgGradient: 'from-amber-500/10 to-orange-500/10',
+  },
+  {
+    id: 'sports',
+    icon: Trophy,
+    title: 'Sports',
+    description: 'Sporting equipment and outdoor gear',
+    itemCount: 312,
+    gradient: 'from-emerald-500 to-teal-500',
+    bgGradient: 'from-emerald-500/10 to-teal-500/10',
+  },
+  {
+    id: 'uni',
+    icon: GraduationCap,
+    title: 'Uni Items',
+    description: 'Textbooks, study materials, and campus essentials',
+    itemCount: 156,
+    gradient: 'from-blue-500 to-cyan-500',
+    bgGradient: 'from-blue-500/10 to-cyan-500/10',
+  },
+  {
+    id: 'video',
+    icon: Video,
+    title: 'Video',
+    description: 'Cameras, lighting, and video production gear',
+    itemCount: 198,
+    gradient: 'from-purple-500 to-indigo-500',
+    bgGradient: 'from-purple-500/10 to-indigo-500/10',
+  },
+  {
+    id: 'other',
+    icon: Package,
+    title: 'Other Items',
+    description: 'Tools, electronics, and miscellaneous rentals',
+    itemCount: 427,
+    gradient: 'from-rose-500 to-pink-500',
+    bgGradient: 'from-rose-500/10 to-pink-500/10',
+  },
+];
