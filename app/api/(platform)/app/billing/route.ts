@@ -1,5 +1,5 @@
 import User from "@/models/user";
-import { auth } from "@clerk/nextjs/server";
+// // import { auth } from "@clerk/nextjs/server";
 import { NextRequest } from "next/server";
 
 /**

@@ -4,7 +4,7 @@ import {
   lemonSqueezySetup,
   createCustomer,
 } from "@lemonsqueezy/lemonsqueezy.js";
-import { auth, clerkClient } from "@clerk/nextjs/server";
+// // import { auth, clerkClient } from "@clerk/nextjs/server";
 import User from "@/models/user";
 import { connectDB } from "@/lib/db";
 import { lemonSqueezyStoreId, SiteSettings } from "@/lib/config/settings";

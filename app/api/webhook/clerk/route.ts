@@ -1,7 +1,7 @@
 import { Webhook } from "svix";
 import { headers } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
-import { clerkClient, WebhookEvent } from "@clerk/nextjs/server";
+// // import { clerkClient, WebhookEvent } from "@clerk/nextjs/server";
 import { connectDB } from "@/lib/db";
 import User from "@/models/user";
 import { Credits, paymentProvider } from "@/lib/config/pricing";

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { headers } from "next/headers";
 import { connectDB } from "@/lib/db";
-import { clerkClient } from "@clerk/nextjs/server";
+// // import { clerkClient } from "@clerk/nextjs/server";
 import User from "@/models/user";
 import { Credits, PricingPlans } from "@/lib/config/pricing";
 import {

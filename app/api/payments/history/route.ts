@@ -1,11 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
-import { auth } from "@clerk/nextjs/server";
+// import { auth } from "@clerk/nextjs/server";
 import { connectDB } from "@/lib/db";
 import { getUserPaymentHistory } from "@/lib/payment-utils";
 
 export async function GET(req: NextRequest) {
   try {
-    const { userId } = await auth();
+    const userId = null; // Authentication temporarily disabled
 
     if (!userId) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });

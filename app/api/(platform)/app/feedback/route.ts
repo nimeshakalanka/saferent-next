@@ -1,5 +1,5 @@
 import Feedback from "@/models/feedback";
-import { auth } from "@clerk/nextjs/server";
+// // import { auth } from "@clerk/nextjs/server";
 import { NextRequest, NextResponse } from "next/server";
 import { withRateLimit, RATE_LIMIT_CONFIGS } from "@/lib/rate-limiter";
 

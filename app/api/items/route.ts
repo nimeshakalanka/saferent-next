@@ -1,4 +1,4 @@
-import { auth } from '@clerk/nextjs/server';
+// import { auth } from '@clerk/nextjs/server';
 import { NextRequest, NextResponse } from 'next/server';
 import { connectDB } from '@/lib/db';
 import { Item } from '@/models/Item';
@@ -27,7 +27,7 @@ export async function GET(request: NextRequest) {
 // POST - Create new item (requires authentication)
 export async function POST(request: NextRequest) {
   try {
-    const { userId } = await auth();
+    const userId = null; // Authentication temporarily disabled
 
     if (!userId) {
       return NextResponse.json(
