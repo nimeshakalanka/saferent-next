@@ -6,12 +6,13 @@ import { Item } from '@/models/Item';
 // GET single item
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params;
     await connectDB();
 
-    const item = await Item.findById(params.id);
+    const item = await Item.findById(id);
 
     if (!item) {
       return NextResponse.json(
@@ -33,9 +34,10 @@ export async function GET(
 // PUT - Update item (owner only)
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params;
     const { userId } = await auth();
 
     if (!userId) {
@@ -47,7 +49,7 @@ export async function PUT(
 
     await connectDB();
 
-    const item = await Item.findById(params.id);
+    const item = await Item.findById(id);
 
     if (!item) {
       return NextResponse.json(
@@ -65,7 +67,7 @@ export async function PUT(
 
     const body = await request.json();
     const updatedItem = await Item.findByIdAndUpdate(
-      params.id,
+      id,
       { ...body, updatedAt: new Date() },
       { new: true }
     );
@@ -83,9 +85,10 @@ export async function PUT(
 // DELETE item (owner only)
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params;
     const { userId } = await auth();
 
     if (!userId) {
@@ -97,7 +100,7 @@ export async function DELETE(
 
     await connectDB();
 
-    const item = await Item.findById(params.id);
+    const item = await Item.findById(id);
 
     if (!item) {
       return NextResponse.json(
@@ -113,7 +116,7 @@ export async function DELETE(
       );
     }
 
-    await Item.findByIdAndDelete(params.id);
+    await Item.findByIdAndDelete(id);
 
     return NextResponse.json({ message: 'Item deleted successfully' });
   } catch (error) {

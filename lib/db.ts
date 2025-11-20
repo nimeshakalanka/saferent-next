@@ -2,7 +2,6 @@ import mongoose from 'mongoose';
 
 declare global {
   // Allow attaching a mongoose cache to the global object during development/hot-reload
-  // eslint-disable-next-line no-var
   var mongoose: { conn: any | null; promise: Promise<any> | null } | undefined;
 }
 
