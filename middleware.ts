@@ -1,8 +1,8 @@
-import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
+// import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 import createMiddleware from "next-intl/middleware";
 import { locales } from "@/lib/config/locales";
-import { publicRoutes } from "@/lib/routes";
-import { NextResponse } from "next/server";
+// import { publicRoutes } from "@/lib/routes";
+import { NextResponse, NextRequest } from "next/server";
 import { checkEnvironmentVariables } from "@/lib/env-checker";
 
 // Configure i18n middleware
@@ -12,9 +12,9 @@ const intlMiddleware = createMiddleware({
 });
 
 // Create a matcher for public routes
-const isPublicRoute = createRouteMatcher(publicRoutes);
+// const isPublicRoute = createRouteMatcher(publicRoutes);
 
-export default clerkMiddleware(async (auth, req) => {
+export default async function middleware(req: NextRequest) {
   const pathname = req.nextUrl.pathname;
   
   // Skip ALL middleware processing for static files, setup page and API routes
@@ -61,14 +61,15 @@ export default clerkMiddleware(async (auth, req) => {
     return NextResponse.redirect(url);
   }
 
-  if (!isPublicRoute(req)) {
-    await auth.protect(); // Protect private routes
-  }
+  // Authentication temporarily disabled
+  // if (!isPublicRoute(req)) {
+  //   await auth.protect(); // Protect private routes
+  // }
 
   const intlResponse = intlMiddleware(req);
 
   return intlResponse;
-});
+}
 
 // Define config for the middleware
 export const config = {
