@@ -97,18 +97,14 @@ export class DatabaseUtils {
   static getConnectionStats(): {
     isConnected: boolean;
     readyState: number;
-    host: string;
-    port: number;
-    name: string;
-    connectionAttempts: number;
-    lastConnectionAttempt: number;
     uptime: number;
   } {
     const state = getConnectionState();
     const startTime = process.uptime();
 
     return {
-      ...state,
+      isConnected: isConnected(),
+      readyState: state,
       uptime: Math.round(startTime),
     };
   }
