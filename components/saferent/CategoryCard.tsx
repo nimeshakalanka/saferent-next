@@ -8,6 +8,7 @@ interface CategoryCardProps {
   itemCount: number;
   href: string;
   gradient: string;
+  bgGradient?: string;
 }
 
 export function CategoryCard({
@@ -17,18 +18,38 @@ export function CategoryCard({
   itemCount,
   href,
   gradient,
+  bgGradient,
 }: CategoryCardProps) {
   return (
-    <Link href={href}>
-      <div className="group bg-gray-800 rounded-xl p-6 hover:bg-gray-750 transition-all duration-300 border border-gray-700 hover:border-gray-600 cursor-pointer">
-        <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-          <Icon className="text-white" size={24} />
-        </div>
-        <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
-        <p className="text-gray-400 mb-4">{description}</p>
-        <div className="flex items-center justify-between">
-          <span className="text-sm text-gray-500">{itemCount} items</span>
-          <span className="text-purple-400 group-hover:translate-x-1 transition-transform">→</span>
+    <Link href={href} className="group relative block">
+      <div className={`absolute inset-0 bg-gradient-to-br ${bgGradient || gradient} rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+      
+      <div className="relative bg-neutral-900 border border-neutral-800 rounded-2xl p-6 hover:border-neutral-700 transition-all duration-300 overflow-hidden cursor-pointer">
+        <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${bgGradient || gradient} rounded-full blur-3xl opacity-50`}></div>
+        
+        <div className="relative space-y-4">
+          <div className="flex items-start justify-between">
+            <div className={`w-12 h-12 bg-gradient-to-br ${gradient} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+              <Icon className="w-6 h-6 text-white" />
+            </div>
+            <span className="px-3 py-1 bg-neutral-800 text-neutral-300 text-xs font-medium rounded-full">
+              {itemCount} items
+            </span>
+          </div>
+          
+          <div className="space-y-2">
+            <h3 className="text-xl font-semibold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-white group-hover:to-neutral-300 transition-all">
+              {title}
+            </h3>
+            <p className="text-neutral-400 text-sm leading-relaxed">
+              {description}
+            </p>
+          </div>
+          
+          <div className="flex items-center gap-2 text-emerald-400 group-hover:gap-4 transition-all">
+            <span className="text-sm font-medium">Browse items</span>
+            <span className="text-lg">→</span>
+          </div>
         </div>
       </div>
     </Link>

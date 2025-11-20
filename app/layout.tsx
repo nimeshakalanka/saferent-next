@@ -27,8 +27,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <body className={roboto.className} suppressHydrationWarning>
           <ThemeProvider
             attribute="class"
-            defaultTheme="light"
-            enableSystem
+            defaultTheme="dark"
+            enableSystem={false}
             disableTransitionOnChange
             storageKey="saferent-theme"
           >

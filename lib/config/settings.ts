@@ -33,7 +33,7 @@ export const SiteSettings: SiteSettingsType = {
   name: "SafeRent",
   logoUrlLight: "/saferent/SR.svg",
   logoUrlDark: "/saferent/SR.svg",
-  defaultTheme: "light",
+  defaultTheme: "dark",
   domainName: "saferent.com",
   domainUrl:
     process.env.NODE_ENV === "development"

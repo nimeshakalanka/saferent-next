@@ -7,8 +7,7 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-pink-900/20" />
+      <section className="relative py-20 px-4 overflow-hidden hero-pattern">
         <div className="container mx-auto relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
@@ -79,6 +78,7 @@ export default function LandingPage() {
                 itemCount={category.itemCount}
                 href={`/category/${category.id}`}
                 gradient={category.gradient}
+                bgGradient={category.bgGradient}
               />
             ))}
           </div>
