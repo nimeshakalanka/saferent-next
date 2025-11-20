@@ -1,14 +1,13 @@
 'use client';
 
 import Link from 'next/link';
-import { UserButton, useUser } from '@clerk/nextjs';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import Image from 'next/image';
 
 export function SafeRentHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { isSignedIn } = useUser();
+  const isSignedIn = false; // Temporarily disabled
 
   const handleLinkClick = () => {
     setIsMenuOpen(false);
@@ -49,9 +48,7 @@ export function SafeRentHeader() {
             {/* Right: Actions (desktop) */}
             <div className="hidden md:flex items-center gap-3">
               {isSignedIn ? (
-                <>
-                  <UserButton afterSignOutUrl="/" />
-                </>
+                <div className="text-white">Profile</div>
               ) : (
                 <>
                   <Link href="/sign-in" onClick={handleLinkClick}
@@ -92,9 +89,7 @@ export function SafeRentHeader() {
                 </Link>
                 
                 {isSignedIn ? (
-                  <div className="pt-2">
-                    <UserButton afterSignOutUrl="/" />
-                  </div>
+                  <div className="pt-2 text-white">Profile</div>
                 ) : (
                   <div className="flex gap-2 pt-2">
                     <Link href="/sign-in" onClick={handleLinkClick} className="flex-1 px-4 py-2 text-sm font-medium text-neutral-300 hover:text-white transition-colors border border-neutral-800 rounded-lg text-center">

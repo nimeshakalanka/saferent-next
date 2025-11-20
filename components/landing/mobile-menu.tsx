@@ -46,7 +46,7 @@ export function MobileMenu({ isOpen, onClose, navItems }: MobileMenuProps) {
       opacity: 0,
       x: "100%",
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 400,
         damping: 40,
       },
@@ -55,7 +55,7 @@ export function MobileMenu({ isOpen, onClose, navItems }: MobileMenuProps) {
       opacity: 1,
       x: "0%",
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 400,
         damping: 40,
         staggerChildren: 0.1,

@@ -1,12 +1,12 @@
 'use client';
 
-import { useUser } from '@clerk/nextjs';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Upload } from 'lucide-react';
 
 export default function ListItemPage() {
-  const { user, isLoaded } = useUser();
+  const user = null;
+  const isLoaded = true;
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
@@ -40,8 +40,8 @@ export default function ListItemPage() {
         body: JSON.stringify({
           ...formData,
           pricePerDay: parseFloat(formData.pricePerDay),
-          ownerName: user.fullName || user.firstName || 'Anonymous',
-          ownerEmail: user.emailAddresses[0].emailAddress,
+          ownerName: 'Anonymous',
+          ownerEmail: 'user@example.com',
         }),
       });
 
