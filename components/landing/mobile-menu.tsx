@@ -38,7 +38,6 @@ export function MobileMenu({ isOpen, onClose, navItems }: MobileMenuProps) {
     return () => {
       document.body.style.overflow = "auto";
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen]);
 
   // Animation variants

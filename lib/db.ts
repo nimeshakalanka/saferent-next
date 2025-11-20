@@ -41,3 +41,30 @@ export async function connectDB() {
 
   return cached!.conn;
 }
+
+export function getConnectionState() {
+  return mongoose.connection.readyState;
+}
+
+export async function checkDatabaseHealth(): Promise<{
+  status: string;
+  message: string;
+  details: {
+    host: string | undefined;
+    readyState: number;
+    readyStateName: string;
+  };
+}> {
+  const readyState = mongoose.connection.readyState;
+  const readyStateNames = ['disconnected', 'connected', 'connecting', 'disconnecting'];
+  
+  return {
+    status: readyState === 1 ? 'healthy' : 'unhealthy',
+    message: readyState === 1 ? 'Database connection is healthy' : 'Database connection is not healthy',
+    details: {
+      host: mongoose.connection.host,
+      readyState,
+      readyStateName: readyStateNames[readyState] || 'unknown',
+    },
+  };
+}
