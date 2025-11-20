@@ -9,7 +9,7 @@ interface WelcomeEmailProps {
 export function WelcomeEmail({ firstName, dashboardUrl }: WelcomeEmailProps) {
   return (
     <BaseEmail
-      preview={`Welcome to Founderflow, ${firstName}!`}
+      preview={`Welcome to SafeRent, ${firstName}!`}
       title={`Welcome aboard, ${firstName}! 🎉`}
     >
       <Text
@@ -20,7 +20,7 @@ export function WelcomeEmail({ firstName, dashboardUrl }: WelcomeEmailProps) {
           margin: "0 0 20px 0",
         }}
       >
-        Thank you for joining Founderflow! We're excited to have you as part of our
+        Thank you for joining SafeRent! We're excited to have you as part of our
         community.
       </Text>
 
@@ -32,8 +32,7 @@ export function WelcomeEmail({ firstName, dashboardUrl }: WelcomeEmailProps) {
           margin: "0 0 20px 0",
         }}
       >
-        You've been granted <strong>10 free credits</strong> to get started.
-        These credits can be used to:
+        Start exploring thousands of items available for rent:
       </Text>
 
       <Section style={{ margin: "20px 0" }}>
@@ -45,7 +44,7 @@ export function WelcomeEmail({ firstName, dashboardUrl }: WelcomeEmailProps) {
             margin: "0 0 10px 0",
           }}
         >
-          • ✅ Create professional contracts and agreements
+          • 📱 Electronics & Gadgets
         </Text>
         <Text
           style={{
@@ -55,7 +54,7 @@ export function WelcomeEmail({ firstName, dashboardUrl }: WelcomeEmailProps) {
             margin: "0 0 10px 0",
           }}
         >
-          • ✍️ Get legally binding e-signatures
+          • 🚗 Vehicles & Transportation
         </Text>
         <Text
           style={{
@@ -65,7 +64,7 @@ export function WelcomeEmail({ firstName, dashboardUrl }: WelcomeEmailProps) {
             margin: "0 0 10px 0",
           }}
         >
-          • 🤖 Generate AI-powered contracts instantly
+          • 🏠 Home & Garden Equipment
         </Text>
         <Text
           style={{
@@ -75,7 +74,7 @@ export function WelcomeEmail({ firstName, dashboardUrl }: WelcomeEmailProps) {
             margin: "0 0 20px 0",
           }}
         >
-          • 💰 Create payment links and invoices
+          • 🎮 Sports & Entertainment
         </Text>
       </Section>
 
@@ -120,7 +119,7 @@ export function WelcomeEmail({ firstName, dashboardUrl }: WelcomeEmailProps) {
       >
         Best regards,
         <br />
-        The Founderflow Team
+        The SafeRent Team
       </Text>
     </BaseEmail>
   );

@@ -4,36 +4,36 @@ import { SiteSettings } from "./settings";
 const SEO_CONFIG: Metadata = {
   title: {
     template: `%s | ${SiteSettings.name}`,
-    default: "Founderflow - Modern Next.js SaaS Boilerplate",
+    default: "SafeRent - Rent Anything Safely",
   },
   description:
-    "A modern, fully featured Next.js boilerplate with authentication, subscriptions, i18n, beautiful UI components, and everything you need to launch your SaaS quickly.",
+    "SafeRent is your trusted platform for renting items safely and securely. From electronics to vehicles, find what you need with verified listings and secure payments.",
   keywords:
-    "nextjs, saas, boilerplate, authentication, subscriptions, i18n, ui components, typescript",
+    "rent, rental, saferent, equipment rental, electronics rental, vehicle rental, secure payments, verified listings",
   icons: "/static/favicon.ico",
   openGraph: {
     type: "website",
-    siteName: "Founderflow",
+    siteName: "SafeRent",
     locale: "en_US",
-    url: "https://Founderflow.online",
-    title: "Founderflow - Next.js SaaS Boilerplate",
+    url: "https://saferent.com",
+    title: "SafeRent - Rent Anything Safely",
     description:
-      "A modern, fully featured Next.js boilerplate with authentication, subscriptions, i18n, beautiful UI components, and everything you need to launch your SaaS quickly.",
+      "SafeRent is your trusted platform for renting items safely and securely. From electronics to vehicles, find what you need with verified listings and secure payments.",
     images: [
       {
         url: "/og-blog.jpg",
         width: 1200,
         height: 630,
-        alt: "Founderflow - Next.js SaaS Boilerplate",
+        alt: "SafeRent - Rent Anything Safely",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@Founderflowdev",
-    title: "Founderflow - Next.js SaaS Boilerplate",
+    site: "@SafeRent",
+    title: "SafeRent - Rent Anything Safely",
     description:
-      "A modern, fully featured Next.js boilerplate with authentication, subscriptions, i18n, beautiful UI components, and everything you need to launch your SaaS quickly.",
+      "SafeRent is your trusted platform for renting items safely and securely. From electronics to vehicles, find what you need with verified listings and secure payments.",
     images: ["/og-blog.jpg"],
   },
 };

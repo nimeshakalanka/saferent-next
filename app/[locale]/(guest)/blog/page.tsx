@@ -4,31 +4,31 @@ import { Metadata } from "next";
 
 // SEO Metadata
 export const metadata: Metadata = {
-  title: "Blog ",
+  title: "Blog",
   description:
-    "Discover strategies, tips, and insights to help your SaaS business grow. Articles on product development, marketing, customer success, and more.",
+    "Discover tips, guides, and insights about renting items safely. Articles on equipment rental, best practices, and community stories.",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://saasify.com/blog",
-    title: "SaaSify Blog | Insights for Your Business Growth",
+    url: "https://saferent.com/blog",
+    title: "SafeRent Blog | Rental Tips & Guides",
     description:
-      "Discover strategies, tips, and insights to help your SaaS business grow. Articles on product development, marketing, customer success, and more.",
-    siteName: "SaaSify",
+      "Discover tips, guides, and insights about renting items safely. Articles on equipment rental, best practices, and community stories.",
+    siteName: "SafeRent",
     images: [
       {
         url: "/og-blog.jpg",
         width: 1200,
         height: 630,
-        alt: "SaaSify Blog",
+        alt: "SafeRent Blog",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SaaSify Blog | Insights for Your Business Growth",
+    title: "SafeRent Blog | Rental Tips & Guides",
     description:
-      "Discover strategies, tips, and insights to help your SaaS business grow. Articles on product development, marketing, customer success, and more.",
+      "Discover tips, guides, and insights about renting items safely. Articles on equipment rental, best practices, and community stories.",
     images: ["/og-blog.jpg"],
   },
 };

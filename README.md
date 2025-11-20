@@ -1,19 +1,19 @@
-# Founderflow - SaaS Boilerplate
+# SafeRent - Secure Item Rental Platform
 
-A complete, production-ready Next.js SaaS boilerplate with authentication, payments, internationalization, and more.
+A complete, production-ready Next.js rental marketplace with authentication, secure payments, and item management.
 
 ## 🚀 Features
 
-- **Authentication**: Clerk integration with sign-up/sign-in
-- **Payments**: Dual payment provider support (Stripe & Lemon Squeezy) 
+- **Item Listings**: Browse and search rental items across multiple categories
+- **Authentication**: Secure user authentication with Clerk
+- **Payments**: Multiple payment provider support (Stripe, Lemon Squeezy, WebXPay)
 - **Internationalization**: Multi-language support with next-intl
-- **Database**: MongoDB integration with Mongoose
-- **UI Components**: Radix UI components with Tailwind CSS
-- **Email**: Resend integration for transactional emails
-- **Analytics**: PostHog integration (optional)
-- **CMS**: Sanity integration for blog content (optional)
-- **Responsive Design**: Mobile-first approach
-- **TypeScript**: Full type safety
+- **Database**: MongoDB integration with Mongoose for data management
+- **UI Components**: Modern UI with Radix UI and Tailwind CSS
+- **Email**: Transactional emails with Resend
+- **Categories**: Electronics, Vehicles, Tools, Sports Equipment & more
+- **Responsive Design**: Mobile-first approach for all devices
+- **TypeScript**: Full type safety throughout the application
 
 ## 📦 Tech Stack
 
@@ -33,7 +33,7 @@ A complete, production-ready Next.js SaaS boilerplate with authentication, payme
 
 ```bash
 git clone <your-repo-url>
-cd FounderflowBoilerplate
+cd saferent-next
 ```
 
 ### 2. Install dependencies
