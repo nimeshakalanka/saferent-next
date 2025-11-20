@@ -1,4 +1,4 @@
-import { connectDB, disconnectDB, isConnected, getConnectionState, checkDatabaseHealth } from "@/lib/db";
+import { connectDB, isConnected, getConnectionState, checkDatabaseHealth } from "@/lib/db";
 import { createLogger } from "@/lib/utils/logger";
 
 const logger = createLogger({ component: "db-utils" });
@@ -80,8 +80,8 @@ export class DatabaseUtils {
   static async closeConnection(): Promise<boolean> {
     try {
       if (isConnected()) {
-        await disconnectDB();
-        logger.info("Database connection closed gracefully");
+        // MongoDB connections are managed automatically by Mongoose
+        logger.info("Database connection will be managed by Mongoose");
         return true;
       }
       return true;
