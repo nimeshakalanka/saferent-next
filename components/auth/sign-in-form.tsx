@@ -1,13 +1,9 @@
 "use client";
 // import { SignIn, useAuth } from "@clerk/nextjs";
-import { useTheme } from "next-themes";
-import { dark } from "@clerk/themes";
 import { Link } from "@/i18n/navigation";
 import { Skeleton } from "../ui/skeleton";
 
 export default function SignInForm() {
-  const { theme, systemTheme } = useTheme();
-  const currentTheme = theme === "system" ? systemTheme : theme;
   const isLoaded = true;
   return (
     <>
@@ -16,7 +12,7 @@ export default function SignInForm() {
           <h2 className="text-2xl font-bold mb-4">Sign In</h2>
           <p className="text-muted-foreground">Authentication is temporarily disabled for deployment.</p>
           {/* <SignIn
-            appearance={{
+            appearance={{{
               elements: {
                 cardBox: {
                   boxShadow: "none",

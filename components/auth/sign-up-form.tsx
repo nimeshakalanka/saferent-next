@@ -1,13 +1,9 @@
 "use client";
 // import { SignUp, useAuth } from "@clerk/nextjs";
-import { useTheme } from "next-themes";
-import { dark } from "@clerk/themes";
 import { Link } from "@/i18n/navigation";
 import { Skeleton } from "../ui/skeleton";
 
 export default function SignUpForm() {
-  const { theme, systemTheme } = useTheme();
-  const currentTheme = theme === "system" ? systemTheme : theme;
   const isLoaded = true;
   return (
     <>

@@ -1,14 +1,9 @@
 "use client";
 import { Skeleton } from "@/components/ui/skeleton";
 // import { UserProfile } from "@clerk/nextjs";
-import { dark } from "@clerk/themes";
-import { useTheme } from "next-themes";
 import { Suspense } from "react";
 
 export default function ProfileForm() {
-  const { systemTheme, theme } = useTheme();
-  const currentTheme = theme === "system" ? systemTheme : theme;
-
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <main className="flex mx-auto flex-col items-center w-full max-w-6xl px-4 py-8">
@@ -360,7 +355,7 @@ export default function ProfileForm() {
                     },
                   },
                 }}
-              />
+              /> */}
             </div>
           </Suspense>
         </div>
