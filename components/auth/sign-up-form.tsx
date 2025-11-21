@@ -8,12 +8,14 @@ import { Skeleton } from "../ui/skeleton";
 export default function SignUpForm() {
   const { theme, systemTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
-  const { isLoaded } = useAuth();
+  const isLoaded = true;
   return (
     <>
       {isLoaded ? (
-        <div>
-          <SignUp
+        <div className="p-8 text-center">
+          <h2 className="text-2xl font-bold mb-4">Sign Up</h2>
+          <p className="text-muted-foreground">Authentication is temporarily disabled for deployment.</p>
+          {/* <SignUp
             appearance={{
               elements: {
                 cardBox: {
@@ -26,7 +28,7 @@ export default function SignUpForm() {
               },
               baseTheme: currentTheme === "dark" ? dark : undefined,
             }}
-          />
+          /> */}
 
           <p className="text-[14px] px-2 text-center">
             By Continue, you accept our{" "}

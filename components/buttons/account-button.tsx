@@ -52,11 +52,11 @@ export default function AccountButton() {
                 <CreditCard /> Billing
               </DropdownMenuItem>
             </Link>
-            <SignOutButton>
+            {/* <SignOutButton> */}
               <DropdownMenuItem>
                 <LogOutIcon /> Logout
               </DropdownMenuItem>
-            </SignOutButton>
+            {/* </SignOutButton> */}
           </DropdownMenuContent>
         </DropdownMenu>
       )}

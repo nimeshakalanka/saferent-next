@@ -20,8 +20,10 @@ export default function ProfileForm() {
               </div>
             }
           >
-            <div className="bg-card rounded-xl shadow-sm overflow-hidden">
-              <UserProfile
+            <div className="bg-card rounded-xl shadow-sm overflow-hidden p-8">
+              <h2 className="text-2xl font-bold mb-4">User Profile</h2>
+              <p className="text-muted-foreground">Authentication is temporarily disabled for deployment.</p>
+              {/* <UserProfile
                 appearance={{
                   elements: {
                     rootBox: {

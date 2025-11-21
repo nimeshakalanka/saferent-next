@@ -8,12 +8,14 @@ import { Skeleton } from "../ui/skeleton";
 export default function SignInForm() {
   const { theme, systemTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
-  const { isLoaded } = useAuth();
+  const isLoaded = true;
   return (
     <>
       {isLoaded ? (
-        <div>
-          <SignIn
+        <div className="p-8 text-center">
+          <h2 className="text-2xl font-bold mb-4">Sign In</h2>
+          <p className="text-muted-foreground">Authentication is temporarily disabled for deployment.</p>
+          {/* <SignIn
             appearance={{
               elements: {
                 cardBox: {
@@ -27,7 +29,7 @@ export default function SignInForm() {
               },
               baseTheme: currentTheme === "dark" ? dark : undefined,
             }}
-          />
+          /> */}
           <p className="text-[14px] text-center">
             Don{"'"}t have an account?{" "}
             <Link className="hover:underline" href="/sign-up">
