@@ -1,5 +1,4 @@
 import User from "@/models/user";
-// // import { auth } from "@clerk/nextjs/server";
 import { NextRequest } from "next/server";
 
 /**
@@ -8,11 +7,20 @@ import { NextRequest } from "next/server";
  * @returns Response with user's plan details and credits, or error if user not found
  */
 export const GET = async (req: NextRequest) => {
-  // Get authenticated user ID from Clerk
-  const { userId } = await auth();
+  // Authentication temporarily disabled
+  const userId = null;
 
   // Return early if no user is authenticated
-  if (!userId) return;
+  if (!userId) {
+    return Response.json(
+      {
+        status: "error",
+        message: "Unauthorized",
+        code: "UNAUTHORIZED",
+      },
+      { status: 401 }
+    );
+  }
 
   try {
     // Find user document in database

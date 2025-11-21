@@ -1,5 +1,4 @@
 import Feedback from "@/models/feedback";
-// // import { auth } from "@clerk/nextjs/server";
 import { NextRequest, NextResponse } from "next/server";
 import { withRateLimit, RATE_LIMIT_CONFIGS } from "@/lib/rate-limiter";
 
@@ -13,8 +12,15 @@ export const POST = withRateLimit(RATE_LIMIT_CONFIGS.FEEDBACK)(async (req: NextR
     // Extract rate and feedback from request body
     const { rate, feedback } = await req.json();
 
-    // Get authenticated user ID
-    const { userId } = await auth();
+    // Authentication temporarily disabled
+    const userId = null;
+
+    if (!userId) {
+      return NextResponse.json(
+        { error: "Unauthorized" },
+        { status: 401 }
+      );
+    }
 
     // Validate required fields
     if (!rate || !feedback) {

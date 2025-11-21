@@ -1,7 +1,6 @@
 import { connectDB } from "@/lib/db";
 import Feedback from "@/models/feedback";
 import User from "@/models/user";
-// // import { auth } from "@clerk/nextjs/server";
 import { NextRequest } from "next/server";
 
 /**
@@ -14,8 +13,19 @@ export const GET = async (req: NextRequest) => {
     // Connect to database
     await connectDB();
 
-    // Get authenticated user ID from Clerk
-    const { userId } = await auth();
+    // Authentication temporarily disabled
+    const userId = null;
+
+    if (!userId) {
+      return Response.json(
+        {
+          status: "error",
+          message: "Unauthorized",
+          code: "UNAUTHORIZED",
+        },
+        { status: 401 }
+      );
+    }
 
     // Find user document in database
     const user = await User.findOne({ id: userId });
