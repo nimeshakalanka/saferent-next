@@ -1,5 +1,5 @@
 // Import required dependencies
-// // import { auth, clerkClient } from "@clerk/nextjs/server";
+import { auth, clerkClient } from "@/lib/auth-stub";
 import { NextResponse } from "next/server";
 import User from "@/models/user";
 import { connectDB } from "@/lib/db";

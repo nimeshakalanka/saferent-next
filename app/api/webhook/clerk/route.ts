@@ -1,7 +1,7 @@
 import { Webhook } from "svix";
 import { headers } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
-// // import { clerkClient, WebhookEvent } from "@clerk/nextjs/server";
+import { clerkClient } from "@/lib/auth-stub";
 import { connectDB } from "@/lib/db";
 import User from "@/models/user";
 import { Credits, paymentProvider } from "@/lib/config/pricing";
@@ -15,6 +15,8 @@ import {
 } from "@lemonsqueezy/lemonsqueezy.js";
 import { withTransaction, withTransactionAndExternal } from "@/lib/transaction-utils";
 import { withRateLimit, RATE_LIMIT_CONFIGS } from "@/lib/rate-limiter";
+
+type WebhookEvent = any;
 
 /**
  * Webhook endpoint to handle Clerk user events

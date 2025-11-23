@@ -1,4 +1,4 @@
-// // import { clerkClient } from "@clerk/nextjs/server";
+import { clerkClient } from "@/lib/auth-stub";
 import { NextRequest } from "next/server";
 
 /**

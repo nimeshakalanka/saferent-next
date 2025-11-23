@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { CoinsIcon } from "lucide-react";
 import { useState } from "react";
 import { CreditTopUpDialog } from "@/components/credit-top-up-dialog";
-// import { useAuth } from "@clerk/nextjs";
 import {
   Popover,
   PopoverContent,
@@ -14,7 +13,7 @@ import {
 import { Link } from "@/i18n/navigation";
 
 export default function MyCreditsButton() {
-  const { isSignedIn } = useAuth();
+  const isSignedIn = true; // Authentication temporarily disabled
   const { billing } = useAppContext();
   console.log(billing);
 

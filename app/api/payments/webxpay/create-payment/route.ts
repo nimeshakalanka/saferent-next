@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-// // import { auth, clerkClient } from "@clerk/nextjs/server";
+import { auth, clerkClient } from "@/lib/auth-stub";
 import { connectDB } from "@/lib/db";
 import User from "@/models/user";
 import { createWebXPayPayment, isWebXPayConfigured } from "@/lib/webxpay";

@@ -1,6 +1,5 @@
 "use client";
 
-// import { useAuth } from "@clerk/nextjs";
 import { Button } from "../ui/button";
 import { redirect } from "next/navigation";
 import { useState } from "react";
@@ -55,7 +54,7 @@ export default function CheckoutButton({
   disabled,
   variant,
 }: CheckoutButtonProps) {
-  const { isSignedIn } = useAuth();
+  const isSignedIn = true; // Authentication temporarily disabled
   const [isLoading, setIsLoading] = useState(false);
 
   /**
