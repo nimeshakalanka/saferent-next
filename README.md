@@ -64,33 +64,7 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## 🔧 Environment Variables
 
-### Required Variables
-
-- `MONGO_URI` - MongoDB connection string
-- `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` - Clerk publishable key
-- `CLERK_SECRET_KEY` - Clerk secret key
-- `CLERK_WEBHOOK_SIGNING_SECRET` - Clerk webhook secret
-
-### Payment Providers (Choose One or Both)
-
-**Stripe:**
-- `STRIPE_SECRET_KEY` - Stripe secret key
-- `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` - Stripe publishable key
-- `STRIPE_WEBHOOK_SECRET` - Stripe webhook secret
-
-**Lemon Squeezy:**
-- `LEMON_SQUEEZY_API_KEY` - Lemon Squeezy API key
-- `LEMON_SQUEEZY_STORE_ID` - Your store ID
-- `LEMON_SQUEEZY_WEBHOOK_SECRET` - Webhook secret
-
-### Optional Services
-
-- `RESEND_API_KEY` - For transactional emails
-- `NEXT_PUBLIC_POSTHOG_KEY` - For analytics
-- `SANITY_PROJECT_ID` - For blog CMS
-- `SANITY_DATASET` - Sanity dataset name
 
 ## 🏗️ Project Structure
 
