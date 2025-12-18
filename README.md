@@ -135,4 +135,3 @@ For issues and questions:
 2. Review the code examples in `examples/`
 3. Open an issue on GitHub
 
-## 📄 License
