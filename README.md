@@ -136,5 +136,3 @@ For issues and questions:
 3. Open an issue on GitHub
 
 ## 📄 License
-
-This project is licensed under the MIT License.
