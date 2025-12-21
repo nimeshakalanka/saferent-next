@@ -7,7 +7,6 @@ A complete, production-ready Next.js rental marketplace with authentication, sec
 - **Item Listings**: Browse and search rental items across multiple categories
 - **Authentication**: Secure user authentication with Clerk
 - **Payments**: Multiple payment provider support (Stripe, Lemon Squeezy, WebXPay)
-- **Internationalization**: Multi-language support with next-intl
 - **Database**: MongoDB integration with Mongoose for data management
 - **UI Components**: Modern UI with Radix UI and Tailwind CSS
 - **Email**: Transactional emails with Resend
