@@ -24,7 +24,7 @@ A complete, production-ready Next.js rental marketplace with authentication, sec
 - **Authentication**: Clerk
 - **Payments**: Stripe & Lemon Squeezy
 - **Email**: Resend
-- **Deployment**: Vercel ready
+- **Deployment**: Vercel 
 
 ## 🛠️ Quick Start
 
