@@ -31,7 +31,7 @@ A complete, production-ready Next.js rental marketplace with authentication, sec
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repo-url>
+git clone 
 cd saferent-next
 ```
 
